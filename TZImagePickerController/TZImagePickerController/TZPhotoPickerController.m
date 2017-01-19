@@ -119,9 +119,10 @@ static CGSize AssetGridThumbnailSize;
     layout.itemSize = CGSizeMake(itemWH, itemWH);
     layout.minimumInteritemSpacing = margin;
     layout.minimumLineSpacing = margin;
-    CGFloat top = 44;
-    if (iOS7Later) top += 20;
-    CGFloat collectionViewHeight = tzImagePickerVc.showSelectBtn ? self.view.tz_height - 50 - top : self.view.tz_height - top;
+    CGFloat top = 0;//by Richard
+    CGFloat hei = 44;//by Richard
+    if (iOS7Later) hei += 20;//by Richard
+    CGFloat collectionViewHeight = tzImagePickerVc.showSelectBtn ? self.view.tz_height - 50 - hei : self.view.tz_height - hei;//by Richard
     _collectionView = [[TZCollectionView alloc] initWithFrame:CGRectMake(0, top, self.view.tz_width, collectionViewHeight) collectionViewLayout:layout];
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.dataSource = self;
