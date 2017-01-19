@@ -135,7 +135,7 @@
             
             _settingBtn = [UIButton buttonWithType:UIButtonTypeSystem];
             [_settingBtn setTitle:self.settingBtnTitleStr forState:UIControlStateNormal];
-            _settingBtn.frame = CGRectMake(0, 180, self.view.tz_width, 44);
+            _settingBtn.frame = CGRectMake(0, 180, self.view.tz_width, 0);//by Richard
             _settingBtn.titleLabel.font = [UIFont systemFontOfSize:18];
             [_settingBtn addTarget:self action:@selector(settingBtnClick) forControlEvents:UIControlEventTouchUpInside];
             [self.view addSubview:_settingBtn];
@@ -516,8 +516,8 @@
             albumModel.selectedModels = imagePickerVc.selectedModels;
         }
         if (!_tableView) {
-            CGFloat top = 44;
-            if (iOS7Later) top += 20;
+            CGFloat top = 0;//by Richard
+//            if (iOS7Later) top += 20;
             _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, top, self.view.tz_width, self.view.tz_height - top) style:UITableViewStylePlain];
             _tableView.rowHeight = 70;
             _tableView.tableFooterView = [[UIView alloc] init];
