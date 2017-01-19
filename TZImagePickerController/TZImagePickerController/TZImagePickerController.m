@@ -39,9 +39,9 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationBar.translucent = YES;
+    //self.view.backgroundColor = [UIColor whiteColor];
+    //self.navigationBar.barStyle = UIBarStyleBlack;
+    //self.navigationBar.translucent = YES;
     [TZImageManager manager].shouldFixOrientation = NO;
 
     // Default appearance, you can reset these after this method
@@ -50,9 +50,9 @@
     self.oKButtonTitleColorDisabled = [UIColor colorWithRed:(83/255.0) green:(179/255.0) blue:(17/255.0) alpha:0.5];
     
     if (iOS7Later) {
-        self.navigationBar.barTintColor = [UIColor colorWithRed:(34/255.0) green:(34/255.0)  blue:(34/255.0) alpha:1.0];
-        self.navigationBar.tintColor = [UIColor whiteColor];
-        self.automaticallyAdjustsScrollViewInsets = NO;
+        //self.navigationBar.barTintColor = [UIColor colorWithRed:(34/255.0) green:(34/255.0)  blue:(34/255.0) alpha:1.0];
+        //self.navigationBar.tintColor = [UIColor whiteColor];
+        //self.automaticallyAdjustsScrollViewInsets = NO;
     }
 }
 
